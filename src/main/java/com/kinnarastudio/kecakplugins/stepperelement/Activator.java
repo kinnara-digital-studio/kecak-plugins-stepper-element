@@ -1,4 +1,4 @@
-package com.kinnarastudio.kecakplugins.spinnerelement;
+package com.kinnarastudio.kecakplugins.stepperelement;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,7 +6,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 
-import com.kinnarastudio.kecakplugins.spinnerelement.form.SpinnerElement;
+import com.kinnarastudio.kecakplugins.stepperelement.form.StepperElement;
 
 public class Activator implements BundleActivator {
 
@@ -16,7 +16,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-        registrationList.add(context.registerService(SpinnerElement.class.getName(), new SpinnerElement(), null));
+        registrationList.add(context.registerService(StepperElement.class.getName(), new StepperElement(), null));
     }
 
     public void stop(BundleContext context) {

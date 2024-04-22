@@ -1,4 +1,4 @@
-package com.kinnarastudio.kecakplugins.spinnerelement.form;
+package com.kinnarastudio.kecakplugins.stepperelement.form;
 
 import java.util.Map;
 
@@ -8,34 +8,34 @@ import org.joget.apps.form.model.FormBuilderPaletteElement;
 import org.joget.apps.form.model.FormData;
 import org.joget.apps.form.service.FormUtil;
 
-public class SpinnerElement extends Element implements FormBuilderPaletteElement{
+public class StepperElement extends Element implements FormBuilderPaletteElement{
 
     @Override
     public String getFormBuilderTemplate() {
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'getFormBuilderTemplate'");
-        return "Spinner: ";
+        return "Stepper: ";
     }
 
     @Override
     public String getClassName() {
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'getClassName'");
-        return SpinnerElement.class.getName();
+        return StepperElement.class.getName();
     }
 
     @Override
     public String getLabel() {
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'getLabel'");
-        return "Spinner";
+        return "Stepper";
     }
 
     @Override
     public String getPropertyOptions() {
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'getPropertyOptions'");
-        return AppUtil.readPluginResource(getClassName(), "/properties/spinner.json");
+        return AppUtil.readPluginResource(getClassName(), "/properties/stepper.json");
     }
 
     @Override
@@ -49,7 +49,7 @@ public class SpinnerElement extends Element implements FormBuilderPaletteElement
     public String getName() {
         // TODO Auto-generated method stub
         // throw new UnsupportedOperationException("Unimplemented method 'getName'");
-        return "Spinner";
+        return "Stepper";
     }
 
     @Override
@@ -87,6 +87,6 @@ public class SpinnerElement extends Element implements FormBuilderPaletteElement
         String value = FormUtil.getElementPropertyValue(this, formData);
         map.put("value", value);
         
-        return FormUtil.generateElementHtml(this, formData, "spinner.ftl", map);
+        return FormUtil.generateElementHtml(this, formData, "stepper.ftl", map);
     }    
 }
