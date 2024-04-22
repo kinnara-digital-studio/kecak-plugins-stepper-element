@@ -12,78 +12,56 @@ public class StepperElement extends Element implements FormBuilderPaletteElement
 
     @Override
     public String getFormBuilderTemplate() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getFormBuilderTemplate'");
         return "Stepper: ";
     }
 
     @Override
     public String getClassName() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getClassName'");
         return StepperElement.class.getName();
     }
 
     @Override
     public String getLabel() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getLabel'");
         return "Stepper";
     }
 
     @Override
     public String getPropertyOptions() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getPropertyOptions'");
         return AppUtil.readPluginResource(getClassName(), "/properties/stepper.json");
     }
 
     @Override
     public String getDescription() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getDescription'");
         return getClass().getPackage().getImplementationTitle();
     }
 
     @Override
     public String getName() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getName'");
         return "Stepper";
     }
 
     @Override
     public String getVersion() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getVersion'");
         return getClass().getPackage().getImplementationVersion();
     }
 
     @Override
     public String getFormBuilderCategory() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getFormBuilderCategory'");
         return "Kecak";
     }
 
     @Override
     public String getFormBuilderIcon() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getFormBuilderIcon'");
         return null;
     }
 
     @Override
     public int getFormBuilderPosition() {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'getFormBuilderPosition'");
         return 100;
     }
 
     @Override
     public String renderTemplate(FormData formData, Map map) {
-        // TODO Auto-generated method stub
-        // throw new UnsupportedOperationException("Unimplemented method 'renderTemplate'");
         String value = FormUtil.getElementPropertyValue(this, formData);
         map.put("value", value);
         
